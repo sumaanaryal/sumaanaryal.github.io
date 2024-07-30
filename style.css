@@ -635,6 +635,7 @@ nav ul {
 
 nav ul li {
     float: left;
+    position: relative; /* Add this to make the dropdown positioning relative to the parent */
 }
 
 nav ul li a, .dropbtn {
@@ -659,6 +660,8 @@ nav ul li .dropdown-content {
     background-color: #333;
     min-width: 160px;
     z-index: 1;
+    top: 100%; /* This ensures the dropdown appears below the parent item */
+    left: 0; /* This aligns the dropdown content with the parent item */
 }
 
 nav ul li .dropdown-content a {
@@ -675,7 +678,4 @@ nav ul li .dropdown-content a:hover {
 
 nav ul li.dropdown:hover .dropdown-content {
     display: block;
-    top: 100%;
-    left: 0;
 }
-
