@@ -618,6 +618,61 @@ div.subject {
  div.message {
   margin-top: 30px;
 }
+/* Dropdown Menu Styling */
+.navbar .menu .dropdown {
+    position: relative;
+}
+
+.navbar .menu .dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222; /* Dark background for dropdown */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px; /* Adjust the width as needed */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.navbar .menu .dropdown .dropdown-menu li {
+    border-bottom: 1px solid #333; /* Border between items */
+}
+
+.navbar .menu .dropdown .dropdown-menu li:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+.navbar .menu .dropdown .dropdown-menu a {
+    color: #fff; /* Link color */
+    padding: 10px;
+    display: block;
+    font-size: 16px; /* Adjust font size if needed */
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .menu .dropdown .dropdown-menu a:hover {
+    background-color: #444; /* Hover background color */
+}
+
+/* Show dropdown menu on hover */
+.navbar .menu .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 947px) {
+    .navbar .menu .dropdown .dropdown-menu {
+        width: 100%; /* Full width on small screens */
+        box-shadow: none;
+        border-radius: 0;
+        top: 50px; /* Adjust position for smaller screens */
+    }
+}
 
 div.submit {
   margin-top: 45px;
